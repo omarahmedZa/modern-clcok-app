@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccd5xp27bn8jx"]
+
+[ext_resource type="Texture2D" uid="uid://dcipiiaqgfb3u" path="res://asstes/buttons/clock/clock_background.png" id="1_ru58x"]
+[ext_resource type="Texture2D" uid="uid://c3j20gh0px3ga" path="res://asstes/buttons/clock/clock_interior.png" id="2_fk4wj"]
+[ext_resource type="Script" uid="uid://bl1c50325ifo3" path="res://clock/clock.gd" id="2_t4cy1"]
+[ext_resource type="Texture2D" uid="uid://b8xalpeys2lwc" path="res://asstes/buttons/clock/clock_quarter_line.png" id="3_fk4wj"]
+[ext_resource type="Texture2D" uid="uid://cnxrvml13bc2r" path="res://asstes/buttons/clock/hours_hand.png" id="4_wcf73"]
+[ext_resource type="Texture2D" uid="uid://8ml17n0yfnl5" path="res://asstes/buttons/clock/clock_quarter_line_2.png" id="4_xrin6"]
+[ext_resource type="Texture2D" uid="uid://do1fgcyu3y1pc" path="res://asstes/buttons/clock/minutes_hand.png" id="5_48hhf"]
+[ext_resource type="Texture2D" uid="uid://xuydqdkgechb" path="res://asstes/buttons/clock/seconds_hand.png" id="5_mwaaj"]
+
+[node name="clock" type="TextureRect" node_paths=PackedStringArray("seconds_hand", "hours_hand", "minutes_hand")]
+offset_right = 380.0
+offset_bottom = 380.0
+texture = ExtResource("1_ru58x")
+stretch_mode = 2
+script = ExtResource("2_t4cy1")
+seconds_hand = NodePath("clock_interior/seconds_hand")
+hours_hand = NodePath("clock_interior/hours_hand")
+minutes_hand = NodePath("clock_interior/minutes_hand")
+
+[node name="clock_interior" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fk4wj")
+stretch_mode = 2
+
+[node name="seconds_hand" type="TextureRect" parent="clock_interior"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1.0
+offset_right = 1.0
+offset_bottom = 84.0
+grow_horizontal = 2
+pivot_offset = Vector2(1, 84)
+texture = ExtResource("5_mwaaj")
+stretch_mode = 2
+
+[node name="minutes_hand" type="TextureRect" parent="clock_interior"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -4.0
+offset_top = 2.59756
+offset_bottom = 74.5976
+grow_horizontal = 2
+rotation = 1.5708
+pivot_offset = Vector2(2, 72)
+texture = ExtResource("5_48hhf")
+stretch_mode = 2
+
+[node name="hours_hand" type="TextureRect" parent="clock_interior"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 29.0
+offset_right = 4.0
+offset_bottom = 76.0
+grow_horizontal = 2
+rotation = -0.940732
+pivot_offset = Vector2(2, 47)
+texture = ExtResource("4_wcf73")
+stretch_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -2.5
+offset_right = 22.0
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="quarter_one" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_xrin6")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_right = 120
+
+[node name="quarter_three" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_xrin6")
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -19.0
+offset_right = 2.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="full_round" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_fk4wj")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_bottom = 120
+
+[node name="quarter_two" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_fk4wj")
+stretch_mode = 2
