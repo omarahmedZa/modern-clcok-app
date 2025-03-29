@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://vvqk5tn5t24g"]
+
+[ext_resource type="FontFile" uid="uid://w11nuy3hlo7g" path="res://asstes/fonts/Ovo/Ovo-Regular.ttf" id="1_xv0ey"]
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/fonts/font = ExtResource("1_xv0ey")
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 55

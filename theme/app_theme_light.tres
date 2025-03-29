@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://chejuuoid1bsq"]
+
+[ext_resource type="Texture2D" uid="uid://cm8r4kmxiitji" path="res://asstes/buttons/switch_btn/Property 1=Default.png" id="1_2w4sl"]
+[ext_resource type="FontFile" uid="uid://w11nuy3hlo7g" path="res://asstes/fonts/Ovo/Ovo-Regular.ttf" id="1_yhhom"]
+[ext_resource type="Texture2D" uid="uid://bkkha3moyr2x8" path="res://asstes/buttons/switch_btn/Property 0=Default.png" id="2_ccopc"]
+[ext_resource type="StyleBox" uid="uid://c8ofqfixy5u0g" path="res://theme/new_style_box_flat.tres" id="3_ccopc"]
+
+[resource]
+CheckButton/colors/font_color = Color(0, 0, 0, 1)
+CheckButton/colors/font_focus_color = Color(0, 0, 0, 1)
+CheckButton/colors/font_hover_color = Color(0, 0, 0, 1)
+CheckButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+CheckButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+CheckButton/fonts/font = ExtResource("1_yhhom")
+CheckButton/icons/checked = ExtResource("1_2w4sl")
+CheckButton/icons/unchecked = ExtResource("2_ccopc")
+CheckButton/styles/focus = ExtResource("3_ccopc")
+CheckButton/styles/hover = ExtResource("3_ccopc")
+CheckButton/styles/normal = ExtResource("3_ccopc")
+CheckButton/styles/pressed = ExtResource("3_ccopc")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/fonts/font = ExtResource("1_yhhom")
+MarginContainer/constants/margin_left = 20

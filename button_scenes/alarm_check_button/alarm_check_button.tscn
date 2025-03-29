@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://36o80uqj5bjj"]
+
+[ext_resource type="Theme" uid="uid://chejuuoid1bsq" path="res://theme/app_theme_light.tres" id="1_yx7df"]
+[ext_resource type="Script" uid="uid://e1jo57onpidx" path="res://button_scenes/alarm_check_button/alarm_check_button.gd" id="2_g27ly"]
+
+[node name="alarm_check_button" type="CheckButton" node_paths=PackedStringArray("alarm_time_lable", "alarm_time_format_lable", "days_lable")]
+custom_minimum_size = Vector2(388, 70)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -35.0
+offset_right = 194.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yx7df")
+script = ExtResource("2_g27ly")
+alarm_time_lable = NodePath("MarginContainer/VBoxContainer/HBoxContainer/alarm_time_lable")
+alarm_time_format_lable = NodePath("MarginContainer/VBoxContainer/HBoxContainer/alarm_time_lable2")
+days_lable = NodePath("MarginContainer/VBoxContainer/days_lable_container/days_lable")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="alarm_time_lable" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "5:39"
+
+[node name="alarm_time_lable2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 10
+text = "AM"
+
+[node name="days_lable_container" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="days_lable" type="Label" parent="MarginContainer/VBoxContainer/days_lable_container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Tomorrow"
