@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://co38p73dusaa4"]
+
+[ext_resource type="Texture2D" uid="uid://c6fomqylt73dv" path="res://asstes/buttons/btn_background.png" id="1_rb617"]
+[ext_resource type="Script" uid="uid://cd42pm3d5f45o" path="res://general/general_button/general_button.gd" id="2_7q64y"]
+
+[node name="general_button" type="Button" node_paths=PackedStringArray("button_image")]
+offset_right = 66.0
+offset_bottom = 66.0
+icon = ExtResource("1_rb617")
+flat = true
+script = ExtResource("2_7q64y")
+button_image = NodePath("button_image")
+
+[node name="button_image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -22.0
+offset_right = 17.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2

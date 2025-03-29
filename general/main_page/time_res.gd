@@ -1,3 +1,4 @@
+class_name time_res
 extends Resource
 
 @export var h_time : int

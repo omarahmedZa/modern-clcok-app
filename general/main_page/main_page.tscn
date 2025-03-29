@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjcurq6u10vgm"]
+
+[ext_resource type="Theme" uid="uid://vvqk5tn5t24g" path="res://general/main_page/main_page_theme.tres" id="1_xtyb6"]
+[ext_resource type="Theme" uid="uid://dve8fodncibxy" path="res://general/main_page/mian_lable_theme.tres" id="2_kbw62"]
+[ext_resource type="Script" uid="uid://dm87cgkbeynpj" path="res://general/main_page/main_page.gd" id="2_p4jmf"]
+[ext_resource type="PackedScene" uid="uid://co38p73dusaa4" path="res://general/general_button/general_button.tscn" id="4_ugobc"]
+[ext_resource type="Texture2D" uid="uid://dobel5aokm0pv" path="res://asstes/buttons/settings_btn/Settings.png" id="5_arpfd"]
+
+[node name="main_page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xtyb6")
+script = ExtResource("2_p4jmf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.988235, 0.976471, 0.976471, 1)
+
+[node name="main_margin_container" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lable_margin_container" type="MarginContainer" parent="ColorRect/main_margin_container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 0
+
+[node name="Label" type="Label" parent="ColorRect/main_margin_container/lable_margin_container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("2_kbw62")
+text = "Clock"
+
+[node name="Button" parent="ColorRect/main_margin_container" instance=ExtResource("4_ugobc")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+image = ExtResource("5_arpfd")
